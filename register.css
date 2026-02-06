@@ -1,0 +1,349 @@
+/* ===============================
+   GLOBAL RESET
+=============================== */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* prevents edge overflow */
+}
+
+/* ===============================
+   CONTAINER
+=============================== */
+.container {
+    width: 900px;
+    max-width: 100%;
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   FORM
+=============================== */
+.form h2 {
+    text-align: center;
+    margin-bottom: 26px;
+    font-size: 22px;
+}
+
+/* ===============================
+   GRID
+=============================== */
+.row {
+    display: flex;
+    gap: 24px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* ===============================
+   LABELS
+=============================== */
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ===============================
+   INPUTS
+=============================== */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* ===============================
+   TEXTAREA
+=============================== */
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* ===============================
+   PASSWORD FIELD
+=============================== */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 42px;
+}
+
+.password-wrapper .eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.password-wrapper .eye:hover {
+    color: #000;
+}
+
+/* ===============================
+   ERROR MESSAGES
+=============================== */
+.error {
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.error-msg {
+    display: block;
+    font-size: 12px;
+    color: #e63946;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    min-height: 14px; /* prevents jumping */
+}
+
+/* ===============================
+   TERMS CHECKBOX
+=============================== */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    flex-wrap: wrap; /* Allow error message to drop to next line */
+}
+
+.terms input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.terms label {
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.terms .error-msg {
+    width: 100%; /* Force to new line */
+    margin-top: 5px;
+}
+
+/* Highlight invalid fields */
+input.invalid, select.invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* ===============================
+   FORM ACTIONS (BUTTON)
+=============================== */
+.form-actions {
+    margin-top: 26px;
+}
+
+.form-actions button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    background: #0056b3;
+}
+
+/* ===============================
+   FOOTER LINK
+=============================== */
+.form p {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* Clean UI for register form */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1f2937;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 280px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=date],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input[type=file] {
+    margin-bottom: 12px;
+}
+
+.error-msg {
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.success {
+    color: #16a34a;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.error {
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #2563eb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.terms {
+    margin-top: 10px;
+}
+
+.terms input {
+    width: auto;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+p a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
